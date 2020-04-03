@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>Lorem, ipsum.</li>
+        <li onclick="this.innerText = 'Someone Touch'">Voluptatem, vel.</li>
+        <li onclick="alert('Hello Tayef')">Voluptates, officia.</li>
+        <li onclick="itemClickEvent(event)">Quos, eos.</li>
+        <li id="last">Quibusdam, saepe.</li>
+    </ul>
+
+    <script>
+        function itemClickEvent(event){
+            console.log(event.target.innerText);
+        }
+
+        document.getElementById("last").addEventListener("click",itemClickEvent);
+    </script>
+</body>
+</html>

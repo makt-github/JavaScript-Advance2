@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>This Keywords Details</h4>
+
+    <h5 onclick="this.innerText = 'Yes Clicked'">Can You Click?</h5>
+
+
+    <script>
+        const obj1 = {
+            name : "MAK Tayef",
+
+            getFullName:function(){
+                console.log(this);
+                return this.name;
+            }
+
+        }
+
+        const obj2 = {
+            name: "MD ABDUL KADIR",
+
+        }
+
+        obj2.getFullName = obj1.getFullName ;
+
+        console.log(obj1.getFullName);
+        console.log(obj2.getFullName);
+
+        obj2.getFullName();
+        obj1.getFullName();
+
+        function add(a,b){
+            console.log(this);
+            return a + b ;
+        }
+
+        add(12,12); // we will get window
+
+        obj2.sum = add;
+        obj2.sum();  // There we wont get window because we used object to the left sid of dot
+    </script>
+</body>
+</html>

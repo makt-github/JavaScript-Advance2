@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var name = "Tayef"
+        function add(x,y){
+            // var result = x + y; 
+            result = x+y ;   // implicitly global
+             return result ;
+             console.log(result);
+             console.log("Name: ",name);
+
+            function double(result){
+                return result * 2 ;
+            }
+        }
+
+        //console.log("Add Result: ",result);
+        var output = add(10,5);
+        console.log("Name: ",name);
+        console.log(output);
+        //console.log("Add Result: ",result);
+    </script>
+</body>
+</html>
